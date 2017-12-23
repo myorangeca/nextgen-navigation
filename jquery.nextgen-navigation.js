@@ -136,6 +136,9 @@ $.fn.extend({
                             	.find("b:first").delay(opts.speed)
                             	.html(opts.closedSign);
 
+                            // test
+                            initApp.fixAppHeight();    
+
                             if (myapp_config.debugState)
                                 console.log("nav item closed")
                         });
@@ -152,11 +155,10 @@ $.fn.extend({
                             if (myapp_config.debugState)
                                 console.log("nav item opened");
 
-
                             /* bug fixed: addresses the .mod-main-boxed class bug, when nav exceeds content height */
-                            if (myapp_config.root_.hasClass("mod-main-boxed")) {
-                                initApp.fixAppHeight();
-                            }
+                            //if (myapp_config.root_.hasClass("mod-main-boxed")) {
+                            initApp.fixAppHeight();
+                            //}
                         });
                     }
                 }
